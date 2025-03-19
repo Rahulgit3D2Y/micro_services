@@ -15,8 +15,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         select: false,
-    }
+    },
+    isAvailable: {
+        type: Boolean,
+        default: false
+    },
 })
 
 
-module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.model('captain', userSchema);
